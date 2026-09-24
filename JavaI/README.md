@@ -1,7 +1,7 @@
 # Java I — Pasaporta digjitale dhe GitHub
 
 ## Çfarë realizova
-Krijova faqen e pasaportës digjitale për personazhin fiktiv Arta Orbita. Projekti përmban tre faqe HTML (`index.html`, `rreth.html` dhe `kontakt.html`) që lidhen me njëra-tjetrën me lidhje relative, si dhe skedarin `style.css` për stilim.
+Krijova faqen e pasaportës digjitale për kandidatin udhërrëfyes të kampusit Arlind Hyseni. Projekti përmban tre faqe HTML (`index.html`, `rreth.html` dhe `kontakt.html`) që lidhen me njëra-tjetrën me lidhje relative, si dhe skedarin `style.css` për stilim.
 
 ## Hapat e hapjes
 1. Hap folderin `JavaI` në VS Code.
@@ -9,7 +9,7 @@ Krijova faqen e pasaportës digjitale për personazhin fiktiv Arta Orbita. Proje
 3. Kliko linqet për të kaluar nga njëra faqe te tjetra.
 
 ## Testet dhe rezultatet
-- **Hyrje:** Klikimi te "Rreth Artës" nga `index.html`
+- **Hyrje:** Klikimi te "Rreth Arlindit" nga `index.html`
   - **Rezultat i pritur:** Hapja e faqes `rreth.html`
   - **Rezultat i marrë:** Faqja u hap me sukses.
 - **Hyrje:** Klikimi te "Kthehu te pasaporta" nga `rreth.html`
@@ -28,7 +28,7 @@ Gjatë hapjes së `index.html` në serverin lokal:
 ## Reflektim individual
 
 **Pyetje:** Cili ndryshim është ruajtur lokalisht por ende nuk shihet në GitHub?
-**Përgjigje:** Ndryshimet që i kemi ruajtur te skedarët në kompjuter (ose i kemi bërë `git commit` lokalisht), por nuk e kemi bërë ende `git push` për t'i dërguar online në GitHub.
+**Përgjigje:** Ndryshimet që kemi ruajtur te skedarët në kompjuter (ose i kemi bërë `git commit` lokalisht), por nuk kemi bërë ende `git push` për t'i dërguar online në GitHub.
 
 **Dallimi mes skedarit lokal, commit-it dhe push-it:**
 - **Skedari lokal:** Kodi që ndodhet në kompjuterin tim pasi e ruaj me `Ctrl + S`.
