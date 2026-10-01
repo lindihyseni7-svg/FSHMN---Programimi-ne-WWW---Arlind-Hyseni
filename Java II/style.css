@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 30px 40px;
+  background-color: #f7f9fc;
+  color: #1e293b;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 10px;
+  top: 10px;
+  background: #ffffff;
+  padding: 8px;
+  z-index: 100;
+}
+
+/* Header */
+header p {
+  margin: 0 0 6px 0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+header h1 {
+  margin: 0 0 16px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: #0f5850;
+  margin: 0 0 24px 0;
+}
+
+/* Navigimi dhe Data */
+.nav-links {
+  margin-bottom: 12px;
+}
+
+.nav-links a {
+  color: #2563eb;
+  margin-right: 12px;
+  font-size: 0.95rem;
+}
+
+.ekspozita {
+  margin: 0 0 24px 0;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+/* Layout per kartelat */
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  color: #0f172a;
+}
+
+/* Kutitë e imazheve */
+.img-container {
+  background-color: #f1f5f9;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.img-container img {
+  max-width: 65%;
+  max-height: 65%;
+}
+
+.pershkrimi {
+  font-size: 0.9rem;
+  color: #334155;
+  text-align: center;
+  margin-bottom: 16px;
+  min-height: 2.6em;
+}
+
+details summary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #334155;
+}
+
+details p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 8px;
+  padding-left: 8px;
+}
+
+/* Footer */
+footer {
+  margin-top: 60px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
