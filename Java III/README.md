@@ -1,4 +1,4 @@
-# Java III - Klinika e CSS
+# Java III - Fillimi i CSS
 
 Kjo eshte detyra per rregullimin e afishes te klubit te debatit.
 
