@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f3f6f9;
+  color: #17263c;
+  margin: 0;
+  padding: 0;
+}
+
+.koka {
+  border-bottom: 2px solid #0d5c4d;
+  padding: 20px 20px 10px 20px;
+  background-color: #f3f6f9;
+}
+
+.koka-mbajtes {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nentitull {
+  color: #556575;
+  font-size: 0.9rem;
+  margin: 0 0 5px 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #17263c;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.etiketat {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tag {
+  color: #0d5c4d;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  background: white;
+}
+
+.solid {
+  border: 1.5px solid #0d5c4d;
+}
+
+.dashed {
+  border: 1.5px dashed #0d5c4d;
+}
+
+h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.35rem;
+  color: #17263c;
+}
+
+.info {
+  color: #556575;
+  font-size: 0.9rem;
+  margin: 0 0 15px 0;
+}
+
+.pershkrimi {
+  margin: 0 0 20px 0;
+  color: #17263c;
+  font-size: 0.95rem;
+}
+
+.buton {
+  display: inline-block;
+  background-color: #0d5c4d;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.buton:hover {
+  background-color: #084036;
+}
+
+.fundi {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #556575;
+  font-size: 0.85rem;
+  padding: 0 20px 20px 20px;
+}
+
+.fundi p {
+  margin: 0;
+}
