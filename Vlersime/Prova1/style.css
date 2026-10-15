@@ -35,3 +35,20 @@ a:focus-visible {
     grid-template-columns: repeat(3, 1fr); /* Saktesisht 3 kolona te barabarta ne 1000px */
   }
 }
+.offers h2 {
+  margin-top: 0; 
+  color: navy; 
+  font-size: 20px; 
+}
+.kategoria {
+  color: #495057; 
+  font-style: italic; 
+  margin: 8px 0 16px 0; 
+}
+.seksioni-info {
+  max-width: 1000px; 
+  padding: 16px; 
+  background-color: #ffffff; 
+  border-left: 4px solid navy; 
+}
+}
