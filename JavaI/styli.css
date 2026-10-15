@@ -1,0 +1,153 @@
+/* =========================================================
+   STYLE.CSS - VARIANTI A: KLUB SHKENCOR (VERSIONI FINAL)
+   ========================================================= */
+
+/* 1. RESETIMI GLOBAL ME SELEKTORIN YLL (*)
+   KRITERI P1.5 DHE P1.7:
+   Selektori yll (*) selekton te gjitha elementet ne faqe pa perjashtim.
+   Vendosja e 'box-sizing: border-box' eshte hapi me i rendesishem per te parandaluar overflow-in.
+   LOGJIKA TEKNIKE:
+   Sipas modelit klasik (content-box), nese nje elementi i japim width: 100%, cdo padding dhe border i shtohet jashte kesaj gjeresie.
+   Kjo shkakton qe gjeresia totale te kaloje 100% te ekranit, duke krijuar scroll horizontal ne ekrane te vogla si 360px.
+   Me 'border-box', padding dhe border llogariten BRENDA gjeresise 100%, duke mbajtur elementin saktesisht ne kornizen e ekranit.
+   OPSION ALTERNATIV:
+   - content-box (vlera bazike e vjeter e shfletuesit ku padding i shtohet gjeresise). */
+* {
+  box-sizing: border-box;
+}
+
+/* 2. STILIZIMI I TRUPIT TE FAQES (BODY)
+   LOGJIKA:
+   Caktohet fonti i sistemit per lexim te paster dhe modern ne cdo shfletues.
+   Perdorim piksela (px) ne vend te njesive relative rem sipas kerkeses.
+   16px margin krijon nje hapesire te barabarte prej te gjitha aneve te dritares. */
+body {
+  font-family: system-ui, -apple-system, sans-serif; /* Fontet e integruara te sistemit */
+  margin: 16px; /* Hapesire e jashtme 16px rreth e qark faqes */
+  background-color: #f8f9fa; /* Prapavije me ngjyre te ndritshme te hirt */
+  color: #212529; /* Ngjyre teksti e erret per kontrast te larte ne lexim */
+}
+
+/* 3. MENUJA E NAVIGIMIT (.navigimi)
+   LOGJIKA:
+   Pasi te 'nav' kemi vendosur linqet <a>, perdorim 'display: flex' per t'i rreshtuar ato horizontalisht ne nje rresht.
+   'gap: 16px' krijon hapesire prej 16px mes linqeve pa pasur nevoje te perdorim margin te individuale.
+   'margin-bottom: 24px' largon permbajtjen e poshtme nga menuja.
+   OPSION ALTERNATIV:
+   - display: inline-block ne te gjitha linqet, por flexbox eshte shume me i lehte per kontrollin e hapesires. */
+.navigimi {
+  margin-bottom: 24px; /* Hapesire prej 24px nen menune e navigimit */
+  display: flex; /* Flexbox i rendit elementet ne te njejtin rresht horizontal */
+  gap: 16px; /* Hapesire prej 16px mes cdo lidhje ne nav */
+}
+
+/* STILIZIMI I LIDHJEVE NE NAVIGIM */
+.navigimi a {
+  color: navy; /* Ngjyre e kalter e erret ushtarake per linqet */
+  text-decoration: none; /* Heq vizen e poshtme automatike te linqeve */
+  font-weight: bold; /* Tekst me shkronja te trashura per dukshmeri te larte */
+  padding: 5px 10px; /* Hapesire e brendshme: 5px lart/poshte dhe 10px majtas/djathtas */
+  border-radius: 4px; /* Rrethon qoshet e linqeve me 4px per pamje me te mekur */
+}
+
+/* 4. RIPARIMI I FOKUSIT TE DUKSHIEM TE TASTIERES (TAB) - KRITERI P1.6
+   LOGJIKA TEKNIKE:
+   Ne kodin e gabuar fillestar kishte 'a:focus { outline: none; }', qe ishte gabim sepse e fshehte fokusin.
+   Perdoruesit qe navigojne me tastiere (shtypin Tab) nuk e shihnin se ku ndodhen.
+   Me kete rregull, kur perdoruesi te shtype Tab dhe te bie mbi lidhjen, shfaqet nje kornize e qarte navy prej 3px.
+   'outline-offset: 3px' e shtyn kornizen e fokusit 3px jashte lidhjes qe te jete krejtesisht e dukshme.
+   OPSION ALTERNATIV:
+   - :focus-visible (stilon fokusin vetem kur perdoret tastiera, jo klikimi me mi). */
+a:focus,
+a:focus-visible {
+  outline: 3px solid navy; /* Kornize e qarte 3px navy gjate kalimit me Tab */
+  outline-offset: 3px; /* Distanca prej 3px e kornizes nga te gjitha anet e elementit */
+}
+
+/* 5. KONTENIERI I KARTAVE (.cards) - KRITERET P1.3, P1.4, P1.5
+   LOGJIKA TEKNIKE DHE KORRIGJIMI I GABIMIT:
+   Shtegu origjinal kishte 'width: 900px', qe ishte gabimi kryesor sepse detyronte gjeresi 900px ne ekrane me te vogla (si 360px mobile), duke krijuar overflow horizontal.
+   Riparimi behet duke perdorur 'width: 100%' dhe 'max-width: 1000px'.
+   Kjo do te thote: Ne ekrane te vogla merren 100% te gjeresise, ndersa ne ekrane te medha nuk zmadhohet me shume se 1000px.
+   
+   RREGULLA E GRID PER GJERESI 360px (KRITERI P1.3):
+   Perdorim 'display: grid' dhe 'grid-template-columns: 1fr'.
+   Kjo i detyron te tri kartat te renditen ne nje kolone te vetme te vetme vertikale ne ekrane te vogla mobile (360px).
+   
+   OPSION ALTERNATIV ME FLEXBOX:
+   - display: flex; flex-direction: column; gap: 24px; */
+.cards {
+  width: 100%; /* Pershtatet ne 100% te gjeresise se dritares ne ekrane te vogla */
+  max-width: 1000px; /* Limiton zmadhimin ne maksimum 1000px ne monitor te medhenj */
+  padding: 24px; /* Hapesire e brendshme prej 24px brenda kornizes navy */
+  border: 2px solid navy; /* Kornize e erret navy 2px rreth te gjitha kartave */
+  border-radius: 8px; /* Qoshe te rregulluara me rreze 8px */
+  background-color: #ffffff; /* Prapavije e bardhe per kontrast */
+  margin-bottom: 32px; /* Hapesire prej 32px nen seksionin e kartave */
+
+  /* GRID BAZIKE PER 360px (1 KOLONE VERTIKALE) */
+  display: grid;
+  grid-template-columns: 1fr; /* Saktesisht 1 kolone ne ekrane te vogla */
+  gap: 24px; /* Hapesire prej 24px mes kartave individuale */
+}
+
+/* 6. MEDIA QUERY PER EKRANE TE GJERA 1000px (KRITERI P1.4)
+   LOGJIKA TEKNIKE:
+   Kur gjeresia e ekranit kalon 800px (si p.sh. ne provim ne 1000px),
+   kjo rregull e ndryshon Grid-in nga 1 kolone ne 3 kolona te barabarta me 'repeat(3, 1fr)'.
+   Kjo shfaq te tri kartat ngjitur me njera-tjetren ne te njejtin rresht.
+   OPSION ALTERNATIV ME FLEXBOX:
+   - @media (min-width: 800px) { .cards { display: flex; } .karta { flex: 1; } } */
+@media (min-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* Saktesisht 3 kolona te barabarta ne 1000px */
+  }
+}
+
+/* 7. STILIZIMI I KARTAVE INDIVIDUALE (.karta) - KRITERI P1.5
+   LOGJIKA TEKNIKE PER TEKSTIN E GJATE (OVERFLOW):
+   Ne provim kerkohet te testohet teksti i gjate pa hapesira (si AktivitetStudentorPaHapesira1234567890...).
+   Nese nuk vendosen rregullat 'overflow-wrap: break-word' dhe 'word-break: break-word', teksti i gjate do te dilte jashte kartes ne 360px.
+   Keto dy rregulla e detyrojne shfletuesin ta thyeje tekstin ne mes te fjales dhe ta kaloje ne rresht te ri, duke ruajtur kornizen e kartes me saktesi. */
+.karta {
+  background-color: #f1f3f5; /* Prapavije me te hirt te ndritshme per cdo karte */
+  border: 1px solid #ced4da; /* Kornize e holle 1px gri rreth kartes */
+  padding: 16px; /* Hapesire e brendshme prej 16px brenda kartes */
+  border-radius: 6px; /* Qoshe te zbutura 6px */
+
+  /* PARANDALIMI I OVERFLOW NGA TEKSTI I GJATE PA HAPESIRA */
+  overflow-wrap: break-word; /* Thyen fjalet e gjata te vazhdueshme */
+  word-break: break-word; /* Siguron mbrojtje shtese ne te gjithe shfletuesit */
+}
+
+/* TITULLI TE KARTA (h2) */
+.karta h2 {
+  margin-top: 0; /* Heq hapesiren e tepert te larte te titullit */
+  color: navy; /* Ngjyre e kalter e erret navy */
+  font-size: 20px; /* Madhesi teksti prej 20px ne vend te 1.25rem */
+}
+
+/* PARAGRAFI I KATEGORISE (.kategoria) */
+.kategoria {
+  color: #495057; /* Ngjyre gri e erret per kategorine */
+  font-style: italic; /* Shkronja te pjerrta per te dalluar kategorine */
+  margin: 8px 0 16px 0; /* Hapesire: 8px lart, 0 majtas/djathtas, 16px poshte */
+}
+
+/* LIDHJA DETAJE (.lidhja-detaje) */
+.lidhja-detaje {
+  color: navy; /* Ngjyre navy per linqet e detajeve */
+  font-weight: bold; /* Shkronja te trashura */
+  text-decoration: underline; /* Vize e poshtme per te treguar se eshte lidhje */
+}
+
+/* 8. SEKSIONI I INFORMACIONIT (#info) - KRITERET P1.2 DHE P1.5
+   LOGJIKA:
+   Caktohet max-width: 1000px per t'u barazuar me gjeresine e kartave ne ekrane te medha.
+   Border-left prej 4px navy i jep nje stil vizual dallues si bllok informativ. */
+.seksioni-info {
+  max-width: 1000px; /* Barazohet me gjeresine e kornizes te kartave */
+  padding: 16px; /* Hapesire e brendshme prej 16px */
+  background-color: #ffffff; /* Prapavije e bardhe */
+  border-left: 4px solid navy; /* Vize e trashe 4px ne te majte per stil vizual */
+}

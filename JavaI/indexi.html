@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="sq">
+  <head>
+    <!-- Kodimi UTF-8 per shfaqjen e sakte te karakterave -->
+    <meta charset="UTF-8" />
+    <!-- Konfigurimi i viewport per t'u pershtatur automatikisht ne ekrane te vogla mobile si 360px -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    <!-- Kerkesa 1: Titulli i faqes i ndryshuar ne 'Klub shkencor' -->
+    <title>Klub shkencor</title>
+    
+    <!-- Lidhja me skedarin e stilizimit CSS -->
+    <link rel="stylesheet" href="styli.css" />
+  </head>
+  <body>
+    <!-- Menuja e navigimit me lidhjet 'Programi' drejt #programi dhe 'Info' drejt #info (P1.2) -->
+    <nav class="navigimi">
+      <a href="#programi">Programi</a>
+      <a href="#info">Info</a>
+    </nav>
+    
+    <main>
+      <!-- Kerkesa 1: Titulli h1 i ndryshuar ne 'Klub shkencor' -->
+      <h1>Klub shkencor</h1>
+      
+      <!-- Seksioni #programi ku do te shfaqen tri kartat e variantit A (P1.1, P1.3, P1.4) -->
+      <section id="programi" class="cards">
+        
+        <!-- Karta 1: Teleskopi (P1.1) -->
+        <article class="karta">
+          <h2>Teleskopi</h2>
+          <p class="kategoria">Kategoria: Shkence</p>
+          <!-- Lidhja Detaje qe dergon te seksioni #info (P1.2) -->
+          <a href="#info" class="lidhja-detaje">Detaje</a>
+        </article>
+
+        <!-- Karta 2: Uji (P1.1) -->
+        <article class="karta">
+          <h2>Uji</h2>
+          <p class="kategoria">Kategoria: Shkence</p>
+          <a href="#info" class="lidhja-detaje">Detaje</a>
+        </article>
+
+        <!-- Karta 3: Energjia (P1.1) -->
+        <article class="karta">
+          <h2>Energjia</h2>
+          <p class="kategoria">Kategoria: Shkence</p>
+          <a href="#info" class="lidhja-detaje">Detaje</a>
+        </article>
+
+      </section>
+
+      <!-- Seksioni i informacionit me id #info (P1.2) -->
+      <section id="info" class="seksioni-info">
+        <h2>Informata</h2>
+        <p>Nje klub i sajuar per te apasionuarit pas shkences dhe kerkimit.</p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+  font-family: system-ui, -apple-system, sans-serif; 
+  margin: 16px;
+  background-color: #f8f9fa; 
+  color: #212529; 
+.navigimi {
+  margin-bottom: 24px; 
+  gap: 16px; 
+}
+a:focus,
+a:focus-visible {
+  outline: 3px solid navy; /* Kornize e qarte 3px navy gjate kalimit me Tab */
+  outline-offset: 3px; /* Distanca prej 3px e kornizes nga te gjitha anet e elementit */
+}
+.offers {
+  width: 100%; 
+  max-width: 1000px;
+  padding: 24px;
+  border: 2px solid navy; 
+  border-radius: 8px; 
+  background-color: #ffffff;
+  margin-bottom: 32px; 
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px; 
+}
+@media (min-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* Saktesisht 3 kolona te barabarta ne 1000px */
+  }
+}
